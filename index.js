@@ -9,7 +9,7 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
-    jf(msg!="")io.emit('chat message', msg);
+    if(msg!="")io.emit('chat message', msg);
   });
 });
 
